@@ -4,7 +4,7 @@
 
 // When the Flutter web app is online (e.g. 'https://app.jmr-edu.in'), put its address here.
 // Every feature's button will then open the real app instead of the early-access form.
-const APP_URL = '';
+const APP_URL = 'https://ai-education-platform-b7c6a.web.app';
 
 // Which early-access role to pre-select for each dashboard.
 const ROLE_FOR = { student: 'Student', teacher: 'Teacher', parent: 'Parent', school: 'School / Institution' };
