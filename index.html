@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=3">
+  <link rel="stylesheet" href="styles.css?v=4">
 </head>
 <body>
 
@@ -95,31 +95,37 @@
             <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 3a7 7 0 0 0-7 7v3l-2 3h18l-2-3v-3a7 7 0 0 0-7-7Z"/><path d="M9 19a3 3 0 0 0 6 0"/></svg></div>
             <h3>JMR AI Learning Coach</h3>
             <p>Ask doubts by text or voice and get step-by-step explanations tied to the student's own lesson and syllabus.</p>
+            <a class="card-link" href="#dashboards" data-goto="student:1">Explore in Student dashboard <span aria-hidden="true">→</span></a>
           </article>
           <article class="feature">
             <div class="icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r=".8"/></svg></div>
             <h3>Weak-topic recovery</h3>
             <p>AI detects weak topics from every attempt and creates remedial practice and recovery tests until they're mastered.</p>
+            <a class="card-link" href="#dashboards" data-goto="student:4">Explore in Student dashboard <span aria-hidden="true">→</span></a>
           </article>
           <article class="feature">
             <div class="icon"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M9 3v4M15 3v4"/></svg></div>
             <h3>Adaptive study plans</h3>
             <p>Personal 30–45 day study and revision plans that adjust as the student improves.</p>
+            <a class="card-link" href="#dashboards" data-goto="student:5">Explore in Student dashboard <span aria-hidden="true">→</span></a>
           </article>
           <article class="feature">
             <div class="icon"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="m8 12 3 3 5-6"/></svg></div>
             <h3>Self tests &amp; previous papers</h3>
             <p>Practise independently with AI-generated tests, mock exams and year-wise previous question papers.</p>
+            <a class="card-link" href="#dashboards" data-goto="student:3">Explore in Student dashboard <span aria-hidden="true">→</span></a>
           </article>
           <article class="feature">
             <div class="icon"><svg viewBox="0 0 24 24"><path d="M14 4l6 6-9 9H5v-6l9-9Z"/><path d="M12 6l6 6"/></svg></div>
             <h3>Handwritten answer evaluation</h3>
             <p>Students upload written answers; AI reads them and helps teachers give marks and feedback faster.</p>
+            <a class="card-link" href="#dashboards" data-goto="teacher:4">Explore in Teacher dashboard <span aria-hidden="true">→</span></a>
           </article>
           <article class="feature">
             <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 3l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.4 6.8 19.1l1-5.8L3.5 9.2l5.9-.9L12 3Z"/></svg></div>
             <h3>XP, streaks &amp; badges</h3>
             <p>Levels, daily challenges and achievement badges keep students motivated to come back every day.</p>
+            <a class="card-link" href="#dashboards" data-goto="student:8">Explore in Student dashboard <span aria-hidden="true">→</span></a>
           </article>
         </div>
       </div>
@@ -214,10 +220,10 @@
           <p class="section-sub left">Hands-on simulations for Physics, Chemistry, Maths and Biology — with AR experiences on Android — so tough concepts finally click.</p>
         </div>
         <div class="lab-grid">
-          <div class="lab"><span class="lab-tag tag-p">Physics</span><p>Ray Optics · Electric Charges · Capacitance · Dual Nature</p></div>
-          <div class="lab"><span class="lab-tag tag-c">Chemistry</span><p>Electrochemistry · Solutions</p></div>
-          <div class="lab"><span class="lab-tag tag-m">Maths</span><p>3D Geometry · Relations · Inverse Trigonometry</p></div>
-          <div class="lab"><span class="lab-tag tag-b">Biology</span><p>Evolution · Inheritance · Molecular Basis · Biotechnology · Human Health</p></div>
+          <div class="lab"><span class="lab-tag tag-p">Physics</span><p>Ray Optics · Electric Charges · Capacitance · Dual Nature</p><a class="card-link" href="#dashboards" data-goto="student:6">Open Interactive Labs <span aria-hidden="true">→</span></a></div>
+          <div class="lab"><span class="lab-tag tag-c">Chemistry</span><p>Electrochemistry · Solutions</p><a class="card-link" href="#dashboards" data-goto="student:6">Open Interactive Labs <span aria-hidden="true">→</span></a></div>
+          <div class="lab"><span class="lab-tag tag-m">Maths</span><p>3D Geometry · Relations · Inverse Trigonometry</p><a class="card-link" href="#dashboards" data-goto="student:6">Open Interactive Labs <span aria-hidden="true">→</span></a></div>
+          <div class="lab"><span class="lab-tag tag-b">Biology</span><p>Evolution · Inheritance · Molecular Basis · Biotechnology · Human Health</p><a class="card-link" href="#dashboards" data-goto="student:6">Open Interactive Labs <span aria-hidden="true">→</span></a></div>
         </div>
       </div>
     </section>
@@ -229,11 +235,13 @@
           <p class="eyebrow eyebrow-blue">Competitive exams</p>
           <h2>JEE · NEET · KCET</h2>
           <p>Dedicated preparation with exam-pattern practice papers, crash courses, mock tests and AI result analysis that shows readiness topic by topic.</p>
+          <a class="card-link card-link-light" href="#dashboards" data-goto="student:3">See exam practice <span aria-hidden="true">→</span></a>
         </article>
         <article class="big-card big-card-gold">
           <p class="eyebrow eyebrow-gold">Teacher Connect</p>
           <h2>Live &amp; recorded classes</h2>
           <p>Find verified teachers for tuition and doubt sessions, book live classes or watch recordings — with parent consent built in.</p>
+          <a class="card-link card-link-light" href="#dashboards" data-goto="parent:8">See Teacher Connect <span aria-hidden="true">→</span></a>
         </article>
       </div>
     </section>
@@ -246,10 +254,10 @@
           <h2>Learn → Test → Recover → Grow</h2>
         </div>
         <ol class="steps steps-4">
-          <li><span class="step-num">1</span><h3>Learn</h3><p>Lessons for your board, class and medium, with the AI coach on hand.</p></li>
-          <li><span class="step-num">2</span><h3>Test</h3><p>Self tests, teacher assignments and previous papers measure understanding.</p></li>
-          <li><span class="step-num">3</span><h3>Recover</h3><p>AI finds weak topics and builds a focused recovery plan.</p></li>
-          <li><span class="step-num">4</span><h3>Grow</h3><p>Progress is tracked and shared with teachers and parents.</p></li>
+          <li><span class="step-num">1</span><h3>Learn</h3><p>Lessons for your board, class and medium, with the AI coach on hand.</p><a class="card-link" href="#dashboards" data-goto="student:0">See how <span aria-hidden="true">→</span></a></li>
+          <li><span class="step-num">2</span><h3>Test</h3><p>Self tests, teacher assignments and previous papers measure understanding.</p><a class="card-link" href="#dashboards" data-goto="student:3">See how <span aria-hidden="true">→</span></a></li>
+          <li><span class="step-num">3</span><h3>Recover</h3><p>AI finds weak topics and builds a focused recovery plan.</p><a class="card-link" href="#dashboards" data-goto="student:4">See how <span aria-hidden="true">→</span></a></li>
+          <li><span class="step-num">4</span><h3>Grow</h3><p>Progress is tracked and shared with teachers and parents.</p><a class="card-link" href="#dashboards" data-goto="parent:3">See how <span aria-hidden="true">→</span></a></li>
         </ol>
       </div>
     </section>
@@ -307,7 +315,7 @@
     </div>
   </footer>
 
-  <script src="dashboards.js?v=3"></script>
-  <script src="script.js?v=3"></script>
+  <script src="dashboards.js?v=4"></script>
+  <script src="script.js?v=4"></script>
 </body>
 </html>

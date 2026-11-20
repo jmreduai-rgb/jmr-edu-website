@@ -269,6 +269,32 @@ p { margin: 0 0 1em; }
   font-size: .72rem; font-weight: 600; padding: .3em .75em; border-radius: 999px;
   background: rgba(20,80,210,.08); color: var(--royal);
 }
+.detail-cta {
+  display: inline-flex; align-items: center; gap: 6px; margin-top: 12px;
+  font-size: .82rem; font-weight: 700; color: var(--navy);
+  background: var(--gold); padding: .55em 1.1em; border-radius: 999px;
+  transition: transform .15s, box-shadow .15s;
+}
+.detail-cta:hover { transform: translateY(-1px); box-shadow: 0 6px 14px rgba(217,164,65,.4); }
+.tile.pulse { animation: pulse 1.2s ease 2; }
+@keyframes pulse { 0%,100% { box-shadow: 0 10px 22px rgba(20,80,210,.30); } 50% { box-shadow: 0 0 0 6px rgba(217,164,65,.55); } }
+
+/* ----- Clickable feature cards (whole card is the link) ----- */
+.feature, .lab, .steps li, .big-card { position: relative; }
+.card-link {
+  display: inline-flex; align-items: center; gap: 6px; margin-top: 14px;
+  font-size: .88rem; font-weight: 700; color: var(--royal);
+}
+.card-link::after { content: ""; position: absolute; inset: 0; border-radius: inherit; }
+.card-link span { transition: transform .15s; }
+.feature:hover .card-link span, .lab:hover .card-link span, .steps li:hover .card-link span, .big-card:hover .card-link span { transform: translateX(4px); }
+.card-link:focus-visible { outline: none; }
+.card-link:focus-visible::after { outline: 3px solid var(--gold); outline-offset: 2px; }
+.card-link-light { color: var(--gold-light); margin-top: 18px; }
+.lab, .steps li, .big-card { transition: transform .2s, box-shadow .2s; }
+.lab:hover, .steps li:hover, .big-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+.lab .card-link { font-size: .82rem; margin-top: 10px; }
+
 .mock-hint { margin: 10px 0 0; text-align: center; font-size: .72rem; color: var(--muted); letter-spacing: .04em; }
 @keyframes detailIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
 

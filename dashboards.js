@@ -2,6 +2,13 @@
 // Each tile is a button; clicking it shows that feature's details inside the mockup.
 // Keep this in sync with the Flutter app's dashboards (lib/features/*_dashboard, teacher, parent, school).
 
+// When the Flutter web app is online (e.g. 'https://app.jmr-edu.in'), put its address here.
+// Every feature's button will then open the real app instead of the early-access form.
+const APP_URL = '';
+
+// Which early-access role to pre-select for each dashboard.
+const ROLE_FOR = { student: 'Student', teacher: 'Teacher', parent: 'Parent', school: 'School / Institution' };
+
 const ICONS = {
   book: '<path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2V5Z"/><path d="M4 19a2 2 0 0 1 2-2h13"/>',
   spark: '<path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5 18 18M18 6l-2.5 2.5M8.5 15.5 6 18"/>',
@@ -145,11 +152,20 @@ function renderDashboard(el) {
         <h4>${label}</h4>
       </div>
       <p>${desc}</p>
-      <ul>${points.map(p => `<li>${p}</li>`).join('')}</ul>`;
+      <ul>${points.map(p => `<li>${p}</li>`).join('')}</ul>
+      ${APP_URL
+        ? `<a class="detail-cta" href="${APP_URL}" target="_blank" rel="noopener">Open ${label} in the JMR app <span aria-hidden="true">→</span></a>`
+        : `<a class="detail-cta" href="#early-access" data-role="${ROLE_FOR[el.dataset.dash]}">Get early access to ${label} <span aria-hidden="true">→</span></a>`}`;
     detail.classList.add('show');
   }
 
   buttons.forEach((b, i) => b.addEventListener('click', () => show(i)));
+  el.showTile = (i) => {
+    show(i);
+    buttons[i].classList.remove('pulse');
+    void buttons[i].offsetWidth;
+    buttons[i].classList.add('pulse');
+  };
   show(0);
 }
 

@@ -33,6 +33,30 @@ tabs.forEach((t, i) => {
   });
 });
 
+// Feature links: any element with data-goto="dashboard:tileIndex" opens that
+// dashboard tab, selects the tile and scrolls to it.
+document.addEventListener('click', (e) => {
+  const link = e.target.closest('[data-goto]');
+  if (!link) return;
+  e.preventDefault();
+  const [dash, index] = link.dataset.goto.split(':');
+  const tab = document.getElementById('t-' + dash);
+  const mock = document.querySelector(`.mock[data-dash="${dash}"]`);
+  if (!tab || !mock) return;
+  selectTab(tab);
+  mock.showTile(Number(index));
+  const mobile = window.matchMedia('(max-width: 900px)').matches;
+  (mobile ? mock : document.querySelector('.tabs')).scrollIntoView({ behavior: 'smooth', block: 'start' });
+});
+
+// "Get early access" buttons inside dashboards pre-select the visitor's role.
+document.addEventListener('click', (e) => {
+  const link = e.target.closest('[data-role]');
+  if (!link) return;
+  const select = document.querySelector('#signup-form select[name="role"]');
+  if (select) select.value = link.dataset.role;
+});
+
 // Early-access form.
 // For now this opens the visitor's email app with the details filled in.
 // Later, replace CONTACT_EMAIL / switch to a form service (e.g. Formspree) to collect sign-ups directly.
